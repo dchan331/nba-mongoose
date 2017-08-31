@@ -30,8 +30,6 @@ mongoose.connection.on('error', function() {
 mongoose.connect(process.env.MONGODB_URI);
 ///
 
-
-
 //setup routes here
 
 app.get('/', function(req,res){
@@ -63,12 +61,21 @@ app.post('/addPlayer', function(req,res){
 });
 
 app.post('/updateTeam', function (req, res) {
-
   Roster.findOneAndUpdate({Name: req.body.name}, {Team: req.body.team}, function(err, result){
     if(err){
       console.log('error in post /updatePlayer', err)
     }else{
       res.send('Succesfully switched '+req.body.name+' to '+req.body.team)
+    }
+  })
+});
+
+app.post('/delete/:id', function (req, res) {
+  Player.remove({_id: req.params.id}, function(err, result){
+    if(err){
+      console.log('error in post delete/id', err);
+    }else{
+      res.send('Player with id '+req.params.id+' has been removed')
     }
   })
 });
