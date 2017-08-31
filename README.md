@@ -34,7 +34,7 @@ username and password on GitHub, where other people can see it!
 ## Exercises
 In the command line, run the following command to populate your Player Document in mLab
 
-    `node playerAdd.js`
+    node playerAdd.js
     
 Check in mLab to ensure there are 5 records in your Player document
 
@@ -51,7 +51,6 @@ Add a new model **Roster** in the model folder that has the following attributes
 **Team**
   *	Required
   *	Type string
-
 
 
 Open `/week03/day3/nba-mongoose/index.js` and and implement missing functionality where it says `// YOUR CODE HERE`. **NOTE:** be sure to do `npm install` before you begin.
