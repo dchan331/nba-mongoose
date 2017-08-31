@@ -1,8 +1,8 @@
-// setup express backend with npm dependencies
+// Setup express backend with npm dependencies
 var express = require('express');
 var app = express();
 
-// setup port
+// Setup port
 var PORT = process.env.PORT || 3000;
 var path = require('path');
 
@@ -25,6 +25,8 @@ if (! process.env.MONGODB_URI) {
 
 // Add Mongoose Connection HERE
 // Add mongoose and Roster and Player models here
+var Roster //
+var Player //
 
 // YOUR CODE HERE
 
@@ -63,6 +65,10 @@ app.post('/addPlayer', function(req,res){
 // YOUR CODE HERE
 
 
+// Add a route with path '/delete/:id' to remove Stephen Curry from
+// the Player Document. Verify by checking mLab
+
+// YOUR CODE HERE
 
 
 // Add route with path '/:pid' that will provide the following info by finding
