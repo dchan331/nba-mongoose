@@ -79,6 +79,6 @@ When you are prompted to add 3 players, the information can be found below
 
 
 ### Test
-Use the `npm start` command to test your functions. The tests could take a long time to run, so please be aware that this is normal.
+Use the `npm test` command to test your functions. The tests could take a long time to run, so please be aware that this is normal.
 
 
