@@ -32,15 +32,21 @@ var Player //
 
 
 
+//uncomment this when your Player model has 5 documents
+throw new Error('Please make sure you have ran both npm install and node playerAdd.js and ensure your database has 5 items in the Player Document')
 
-// Add to the '/' route to find get response from PostMan with all
+// Add to the '/' route to get response from PostMan with all
 // player info. Result should look like playerStats.json in models folder
+// hint: use following mongoose querying method
+// Player.find({query parameter}, function(error, result){
+//  fill in information here
+// })
 app.get('/', function(req,res){
   // YOUR CODE HERE
 })
 
 // Add to the '/addPlayer' route to add Kevin Durant, Lebron James
-// and Russell Westbrook with their respective Jersey Number and Team
+// and Russell Westbrook with their respective Jersey Number and Team to the Roster Document
 // the Roster document in mlab should have 3 records, one for each player
 // after this is completed
 // Lebron James's record should look similar to this
@@ -53,14 +59,15 @@ app.get('/', function(req,res){
 //     "Team": "Cleveland Cavaliers",
 //     "__v": 0
 // }
+//hint: http://mongoosejs.com/docs/models.html and use body-parser (ie. req.body)
 app.post('/addPlayer', function(req,res){
   // YOUR CODE HERE
 });
 
 // Add a route with path '/updateTeam'
 // that updates Kevin Durant's team to Oklahoma City Thunder
-// you should be receving the a similar response form PostMan
-// Succesfully switched Kevin Durant to Oklahoma City Thunder
+// you should be receving a success response from Postman with status code 200
+// check mlab to make sure Kevin's team has been updated
 
 // YOUR CODE HERE
 
