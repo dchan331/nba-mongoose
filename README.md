@@ -32,6 +32,9 @@ commit changes `env.sh`. We've excluded `env.sh` from Git because you shouldn't 
 username and password on GitHub, where other people can see it!
 
 ## Exercises
+
+Open `/week03/day3/nba-mongoose/index.js` and and implement missing functionality where it says `// YOUR CODE HERE`. **NOTE:** be sure to do `npm install` before you begin.
+
 In the command line, run the following command to populate your Player Document in mLab
 
     node playerAdd.js
@@ -51,9 +54,20 @@ Add a new model **Roster** in the model folder that has the following attributes
 **Team**
   *	Required
   *	Type string
+  
+For Mongoose querying methods, refer <a href='https://coursework.vschool.io/mongoose-crud/'>HERE</a>
 
+In this excercise, you will be asked to add to 2 routes:
 
-Open `/week03/day3/nba-mongoose/index.js` and and implement missing functionality where it says `// YOUR CODE HERE`. **NOTE:** be sure to do `npm install` before you begin.
+    1. app.get('/') where you will get all items in the Player Model
+    2. app,post('addPlayer') where you will add 3 players to the Roster Model
+
+In addition, you will have to create 3 additional routes:
+
+    3. path : 'updateTeam' where you will update Kevin Durant's team
+    4. path: 'delete/:id' where you will delete (remove) Stephen Curry from the Player Document
+    5. path: '/:pid' where you will find Russell Westbrook and bring in his information from 
+       both Player and Roster Model
 
 When you are prompted to add 3 players, the information can be found below
 
@@ -62,6 +76,7 @@ When you are prompted to add 3 players, the information can be found below
 | Lebron James | 23 | Cleveland Cavaliers|
 | Russell Westbrook | 0 | Oklahoma City Thunder |
 | Kevin Durant | 35 | Golden State Warriors |
+
 
 ### Test
 Use the `npm start` command to test your functions. The tests could take a long time to run, so please be aware that this is normal.
